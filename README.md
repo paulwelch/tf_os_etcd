@@ -6,7 +6,7 @@ The Etcd cluster will have `cluster_size` number of instances with the ssh keypa
 applied.  Assumes `security_group_ids` allow ports required by Etcd.  Tested with 
 CoreOS Container-Linux.
 
-## Input variables:
+## Input Variables
 
   * `name` - Name (default, `bastion`)
   * `instance_type` - Instance type (default, `t2.micro`)
@@ -23,26 +23,28 @@ CoreOS Container-Linux.
   * `network_id` - ID of OpenStack network
   * `env_name_prefix` - A unique prefix to keep clusters separate 
  
-## Outputs:
+## Outputs
 
   * `etcd_endpoints` - List of IP addresses of Etcd cluster instances
  
-## Example:
+## Example
 
-  module "etcd" {
-    source = "github.com/paulwelch/tf_os_etcd"
+```
+module "etcd" {
+  source = "github.com/paulwelch/tf_os_etcd"
 
-    os_auth_url  = "https://example.com:5000/v3"
-    public_key_file  = "~/.ssh/id_rsa.pub"
-    cluster_size = "3"
-    region  = "myregion"
-    image_name  = "Container-Linux"
-    flavor_name  = "m1.medium"
-    ssh_key_pair_name  = "dev-key"
-    security_group_ids  = [ "12312312-1231-1231-1231-123123123123" ]
-    network_id  = "12312312-1231-1231-1231-123123123123123"
-    env_name_prefix  = "dev"
-  }
+  os_auth_url  = "https://example.com:5000/v3"
+  public_key_file  = "~/.ssh/id_rsa.pub"
+  cluster_size = "3"
+  region  = "myregion"
+  image_name  = "Container-Linux"
+  flavor_name  = "m1.medium"
+  ssh_key_pair_name  = "dev-key"
+  security_group_ids  = [ "12312312-1231-1231-1231-123123123123" ]
+  network_id  = "12312312-1231-1231-1231-123123123123123"
+  env_name_prefix  = "dev"
+}
+```
   
 ## Authors
 
