@@ -25,7 +25,7 @@ CoreOS Container-Linux.
  
 ## Outputs:
 
-  * etcd_endpoints - List of IP addresses of Etcd cluster instances
+  * `etcd_endpoints` - List of IP addresses of Etcd cluster instances
  
 ## Example:
 
@@ -44,7 +44,7 @@ CoreOS Container-Linux.
     env_name_prefix  = "dev"
   }
   
-##Authors
+## Authors
 
 Created and maintained by [Paul Welch](https://github.com/paulwelch)
 
