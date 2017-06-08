@@ -8,10 +8,6 @@ CoreOS Container-Linux.
 
 ## Input Variables
 
-  * `name` - Name (default, `bastion`)
-  * `instance_type` - Instance type (default, `t2.micro`)
-  * `ami_id` - AMI ID of Ubuntu (see `samples/ami.tf`)
-  
   * `os_auth_url` - OpenStack API auth url
   * `public_key_file` - Path to ssh public key file
   * `cluster_size` - Number of instances to start for cluster
