@@ -2,5 +2,8 @@
 *.tfstate
 *.tfstate.backup
 
+# Potentially sensitive information in vars
+*.tfvars
+
 # Module directory
 .terraform/

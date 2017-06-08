@@ -1,0 +1,10 @@
+os_auth_url  = "https://my.metacloud.net:5000/v3"
+public_key_file  = "~/.ssh/id_rsa.pub"
+cluster_size = "3"
+region  = "public"
+image_name  = "Container-Linux"
+flavor_name  = "m1.medium"
+ssh_key_pair_name  = "my-key"
+security_group_ids  = [ "12312312-1231-1231-1231-123123123123" ]
+network_id  = "12312312-1231-1231-1231-123123123123123"
+env_name_prefix  = "dev"
