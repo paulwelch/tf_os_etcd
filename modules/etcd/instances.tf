@@ -14,7 +14,7 @@ module "etcd_network" {
 }
 
 resource "openstack_compute_keypair_v2" "keypair" {
-  name = "${ var.ssh_key_pair_name }"
+  name = "${ var.env_name_prefix}-${ var.ssh_key_pair_name }"
   public_key = "${ file(var.public_key_file) }"
 }
 
