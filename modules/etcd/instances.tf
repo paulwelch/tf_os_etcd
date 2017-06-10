@@ -25,7 +25,7 @@ resource "openstack_compute_instance_v2" "etcd_cluster" {
   region = "${ var.region }"
   image_name = "${ var.image_name }"
   flavor_name = "${ var.flavor_name }"
-  key_pair = "${ var.ssh_key_pair_name }"
+  key_pair = "${ var.env_name_prefix}-${ var.ssh_key_pair_name }"
 
   network {
     port = "${ element(module.etcd_network.ports, count.index+1) }"
