@@ -7,6 +7,7 @@ variable "flavor_name" { }
 variable "ssh_key_pair_name" { }
 variable "security_group_ids" { type="list" }
 variable "network_id" { }
+variable "etcd_version" { }
 variable "env_name_prefix" { }
 
 #####################################################################
@@ -23,6 +24,7 @@ module "etcd" {
   ssh_key_pair_name = "${ var.ssh_key_pair_name }"
   security_group_ids = "${ var.security_group_ids }"
   network_id = "${ var.network_id }"
+  etcd_version = "${ var.etcd_version }"
   env_name_prefix = "${ var.env_name_prefix }"
 }
 

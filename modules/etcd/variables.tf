@@ -70,6 +70,15 @@ OS Network ID.
 EOF
 }
 
+variable "etcd_version" {
+  type = "string"
+
+  description = <<EOF
+ETCD Container version to pull.
+See versions here: https://quay.io/repository/coreos/etcd?tab=tags
+EOF
+}
+
 variable "env_name_prefix" {
   type = "string"
 

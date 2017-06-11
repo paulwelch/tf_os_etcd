@@ -7,4 +7,5 @@ flavor_name  = "m1.medium"
 ssh_key_pair_name  = "my-key"
 security_group_ids  = [ "12312312-1231-1231-1231-123123123123" ]
 network_id  = "12312312-1231-1231-1231-123123123123123"
+etcd_version = "v3.2.0"
 env_name_prefix  = "dev"
